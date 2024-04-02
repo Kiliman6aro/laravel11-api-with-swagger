@@ -6,6 +6,34 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+/**
+ * @OA\Schema(
+ *      schema="Post",
+ *      title="Post",
+ *      description="Post model",
+ *      @OA\Property(
+ *          property="id",
+ *          type="integer",
+ *          format="int64",
+ *          description="The unique identifier for the post"
+ *      ),
+ *      @OA\Property(
+ *          property="title",
+ *          type="string",
+ *          description="The title of the post"
+ *      ),
+ *      @OA\Property(
+ *          property="slug",
+ *          type="string",
+ *          description="The slug of the post"
+ *      ),
+ *      @OA\Property(
+ *          property="content",
+ *          type="string",
+ *          description="The content of the post"
+ *      ),
+ * )
+ */
 class Post extends Model
 {
     use HasFactory;
