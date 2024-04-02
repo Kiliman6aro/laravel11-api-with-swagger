@@ -15,7 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->group('api', [
             \App\Http\Middleware\ForceJsonResponse::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            'auth'
+            'auth:sanctum'
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
